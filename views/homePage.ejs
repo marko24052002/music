@@ -1,0 +1,44 @@
+<%- include('partials/header', { title: 'Music For The Moment', user: typeof user !== 'undefined' ? user : null }) %>
+
+    <section class="hero">
+        <h1>Music For The Moment</h1>
+        <h2>Find Your Perfect Soundtrack</h2>
+        <p>Discover curated playlists for every moment in life. From unstoppable energy to peaceful reflection, we've got the music that matches your mood.</p>
+        
+    </section>
+
+    <section class="categories" id="categories">
+        
+        <div class="category-grid">
+            <a href="/music/unstoppable" class="category-card" data-category="unstoppable">
+                <div class="category-image" style="background-image: url(https://quotefancy.com/media/wallpaper/1600x900/8153005-BE-UNSTOPPABLE-Wallpaper.jpg);"></div>
+                <div class="category-content">
+                    <h3>Unstoppable</h3>
+                    <p>Energetic tracks to fuel your drive and motivation</p>
+                </div>
+            </a>
+            <a href="/music/help" class="category-card" data-category="help">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="category-content">
+                    <h3>Help</h3>
+                    <p>Songs for when you need support and understanding</p>
+                </div>
+            </a>
+            <a href="/music/whats-with-the-world" class="category-card" data-category="whats-with-the-world">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="category-content">
+                    <h3>What's With The World</h3>
+                    <p>Thought-provoking songs about society and change</p>
+                </div>
+            </a>
+            <a href="/music/wonderful-world" class="category-card" data-category="wonderful-world">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                <div class="category-content">
+                    <h3>Wonderful World</h3>
+                    <p>Uplifting songs that celebrate life's beauty</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>

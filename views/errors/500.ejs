@@ -1,0 +1,13 @@
+<%- include('../partials/header', { title: 'Server Error', user: typeof user !== 'undefined' ? user : null }) %>
+
+<div class="category-page" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">
+    <div class="container">
+        <div class="songs-container" style="text-align: center;">
+            <h1>500 - Server Error</h1>
+            <p>Something went wrong on our end. Please try again later.</p>
+            <a href="/" class="btn btn-primary">Go Back Home</a>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

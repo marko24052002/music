@@ -1,0 +1,37 @@
+<%- include('../partials/header', { title: category, user: typeof user !== 'undefined' ? user : null }) %>
+
+<div class="category-page" style="background: <%- background %>">
+    <div class="container">
+        <a href="/" class="back-btn">← Back to Home</a>
+        <div class="category-header">
+            <h1><%= category %> Songs</h1>
+            
+            <% if (user) { %>
+                <a href="/music/song/add" class="btn btn-primary">Add New Song</a>
+            <% } %>
+        </div>
+        
+        <div class="songs-container">
+            <ul class="song-list">
+                <% songs.forEach(song => { %>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <h4><%= song.title %></h4>
+                            <p>by <%= song.artist %></p>
+                            <small>Added by: <%= song.addedBy.username %></small>
+                        </div>
+                        <div class="song-actions">
+                            <% if (user && song.addedBy._id && song.addedBy._id.toString() === user._id.toString()) { %>
+                                <a href="/music/song/edit/<%= song._id %>" class="action-btn">✏️</a>
+                                <button class="action-btn delete-song" data-song-id="<%= song._id %>">🗑️</button>
+                            <% } %>
+                            <button class="play-btn">▶</button>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,48 @@
+<%- include('../partials/header', { title: 'Edit Song', user: typeof user !== 'undefined' ? user : null }) %>
+
+<div class="category-page" style="background: linear-gradient(135deg, #4a148c, #7b1fa2);">
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">← Back</a>
+        <div class="category-header">
+            <h1>Edit Song</h1>
+        </div>
+        
+        <div class="songs-container">
+            <form action="/music/song/edit/<%= song._id %>" method="POST">
+                <div class="form-group">
+                    <label for="title">Song Title</label>
+                    <input type="text" id="title" name="title" value="<%= song.title %>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="artist">Artist</label>
+                    <input type="text" id="artist" name="artist" value="<%= song.artist %>" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="unstoppable" <%= song.category === 'unstoppable' ? 'selected' : '' %>>Unstoppable</option>
+                        <option value="help" <%= song.category === 'help' ? 'selected' : '' %>>Help</option>
+                        <option value="whats-with-the-world" <%= song.category === 'whats-with-the-world' ? 'selected' : '' %>>What's With The World</option>
+                        <option value="wonderful-world" <%= song.category === 'wonderful-world' ? 'selected' : '' %>>Wonderful World</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="youtubeUrl">YouTube URL (optional)</label>
+                    <input type="url" id="youtubeUrl" name="youtubeUrl" value="<%= song.youtubeUrl || '' %>">
+                </div>
+                
+                
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Update Song</button>
+                    <a href="/music/<%= song.category %>" class="btn btn-outline">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
