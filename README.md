@@ -68,5 +68,6 @@ Backend Technologies:
     * Positive vibes music
     * Songs that celebrate existence
  ![Image 24  10  2025  at 10 16](https://github.com/user-attachments/assets/155da7af-a67f-412b-b1c5-f819dfb1a4ef)
+![B95175FC-3356-4D3F-BF64-77BAEBAD5920](https://github.com/user-attachments/assets/85a7a514-e947-42db-a97f-1d723f850e74)
 
       
